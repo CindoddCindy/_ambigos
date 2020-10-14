@@ -26,25 +26,33 @@ public class SellerBaggage extends DateAudit {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private  Long seller_id;
+        private  Long user_id;
 
         @NotBlank
         @Size(max =40)
-        private  String seller_name;
+        private  String user_name;
 
         @NaturalId
         @NotBlank
         @Size(max = 40)
         @Email
-        private  String seller_email;
+        private  String user_email;
 
         @NotBlank
         @Size(max = 15)
-        private Long seller_phone_number;
+        private Long user_phone_number;
 
         @NotBlank
         @Size(max = 100)
-        private String seller_password;
+        private String user_password;
+
+        @NotBlank
+        @Size(max = 20)
+        private String user_status_penjual;
+
+        @NotBlank
+        @Size(max=20)
+        private  String user_status_pembeli;
 
         @ManyToMany(fetch = FetchType.LAZY)
         @JoinTable(name = "user_roles",
@@ -55,51 +63,69 @@ public class SellerBaggage extends DateAudit {
         public SellerBaggage(){
 
         }
-        public SellerBaggage(String seller_name,String seller_email, Long seller_phone_number, String seller_password){
-                this.seller_name=seller_name;
-                this.seller_email=seller_email;
-                this.seller_phone_number=seller_phone_number;
-                this.seller_password=seller_password;
+        public SellerBaggage(String user_name,String user_email, Long user_phone_number, String user_password, String user_status_penjual, String user_status_pembeli){
+                this.user_name=user_name;
+                this.user_email=user_email;
+                this.user_phone_number=user_phone_number;
+                this.user_password=user_password;
+                this.user_status_penjual=user_status_penjual;
+                this.user_status_pembeli=user_status_pembeli;
         }
 
-        public Long getSeller_id(){
-                return  seller_id;
+        public Long getUser_id(){
+                return  user_id;
         }
 
-        public  void setSeller_id(Long seller_id){
-                this.seller_id=seller_id;
+        public  void setUser_id(Long user_id){
+                this.user_id=user_id;
         }
 
-        public String getSeller_name(){
-                return  seller_name;
+        public String getUser_name(){
+                return  user_name;
         }
 
-        public void setSeller_name(String seller_name){
-                this.seller_name=seller_name;
+        public void setUser_name(String user_name){
+                this.user_name=user_name;
         }
 
-        public String getSeller_email(){
-                return  seller_email;
+        public String getUser_email(){
+                return  user_email;
         }
 
-        public void getSeller_email(String seller_email){
-                this.seller_email=seller_email;
+        public void getUser_email(String user_email){
+                this.user_email=user_email;
         }
 
-        public Long getSeller_phone_number(){
-                return  seller_phone_number;
+        public Long getUser_phone_number(){
+                return  user_phone_number;
         }
 
-        public  void setSeller_phone_number(Long phone_number){
-                this.seller_phone_number=seller_phone_number;
+        public  void setUser_phone_number(Long user_number){
+                this.user_phone_number=user_phone_number;
         }
 
-        public String getSeller_password(){
-                return  seller_password;
+        public String getUser_password(){
+                return  user_password;
         }
 
-        public void setSeller_password(String seller_password){
-                this.seller_password=seller_password;
+        public void setUser_password(String user_password){
+                this.user_password=user_password;
+        }
+
+        public String getUser_status_penjual(){
+                return  user_status_penjual;
+        }
+
+        public  void setUser_status_penjual(String user_status_penjual){
+                this.user_status_penjual=user_status_penjual;
+        }
+
+        public String getUser_status_pembeli(){
+                return  user_status_pembeli;
+        }
+
+        public  void setUser_status_pembeli(String user_status_pembeli){
+                this.user_status_pembeli=user_status_pembeli;
         }
 
         public Set<Role> getRoleSet(){
