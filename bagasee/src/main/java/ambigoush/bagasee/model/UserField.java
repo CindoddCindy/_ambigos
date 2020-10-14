@@ -22,7 +22,7 @@ import java.util.Set;
 })
 
 
-public class SellerBaggage extends DateAudit {
+public class UserField extends DateAudit {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,10 +60,10 @@ public class SellerBaggage extends DateAudit {
                 inverseJoinColumns = @JoinColumn(name="role_id"))
         private Set<Role> roleSet= new HashSet<>();
 
-        public SellerBaggage(){
+        public UserField(){
 
         }
-        public SellerBaggage(String user_name,String user_email, Long user_phone_number, String user_password, String user_status_penjual, String user_status_pembeli){
+        public UserField(String user_name, String user_email, Long user_phone_number, String user_password, String user_status_penjual, String user_status_pembeli){
                 this.user_name=user_name;
                 this.user_email=user_email;
                 this.user_phone_number=user_phone_number;
