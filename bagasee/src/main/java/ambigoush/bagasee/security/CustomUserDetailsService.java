@@ -1,6 +1,6 @@
 package ambigoush.bagasee.security;
 
-import ambigoush.bagasee.model.UserField;
+import ambigoush.bagasee.model.SellerBaggage;
 import ambigoush.bagasee.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,7 +18,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 
-        UserField userField= userRepository.findByUsernameOrEmail(s,s)
+        SellerBaggage sellerBaggage = userRepository.findByUsernameOrEmail(s,s)
         .orElseThrow(()->
                 new UsernameNotFoundException("User not found with username or email : " + s));
         return UserPrincipal.create(user);
@@ -26,9 +26,9 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Transactional
     public UserDetails loadUserById(Long id){
-        UserField userField=userRepository.findById(id).orElseThrow(
+        SellerBaggage sellerBaggage =userRepository.findById(id).orElseThrow(
                 ()-> new UsernameNotFoundException("User not found with id : " + id)
         );
-        return UserPrincipal.create(userField);
+        return UserPrincipal.create(sellerBaggage);
     }
 }

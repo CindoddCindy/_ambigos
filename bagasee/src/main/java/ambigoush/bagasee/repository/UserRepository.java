@@ -1,6 +1,6 @@
 package ambigoush.bagasee.repository;
 
-import ambigoush.bagasee.model.UserField;
+import ambigoush.bagasee.model.SellerBaggage;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,13 +8,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserField, Long> {
-    Optional<UserField> findByEmail(String email);
+public interface UserRepository extends JpaRepository<SellerBaggage, Long> {
+    Optional<SellerBaggage> findByEmail(String email);
 
-    Optional<UserField> findByUsernameOrEmail(String username, String email);
-    List<UserField> findByIdIn(List<Long> userIds);
+    Optional<SellerBaggage> findByUsernameOrEmail(String username, String email);
+    List<SellerBaggage> findByIdIn(List<Long> userIds);
 
-    Optional<UserField> findUsername(String user_name);
+    Optional<SellerBaggage> findUsername(String user_name);
 
     Boolean existsByUsername(String user_name);
 
