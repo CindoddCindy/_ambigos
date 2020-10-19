@@ -1,13 +1,13 @@
 package ambigoush.bagasee.model;
 
+
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="role")
-public class Role {
-
+@Table(name = "seller_baggage_role")
+public class SellerBaggageRole {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,26 +17,23 @@ public class Role {
     @Column(length = 60)
     private RoleUser roleUser;
 
-    public Role(){
+    public SellerBaggageRole() {
 
     }
 
-    public Role(RoleUser roleUser){
-        this.roleUser = roleUser;
+    public Long getId() {
+        return id;
     }
 
-    public Long getId(){
-        return  id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setId(Long id){
-        this.id=id;
-    }
-
-    public RoleUser getRoleName(){
+    public RoleUser getRoleUser() {
         return roleUser;
     }
-    public  void setRoleName(RoleUser roleUser){
+
+    public void setRoleUser(RoleUser roleUser) {
         this.roleUser = roleUser;
     }
 }

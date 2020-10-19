@@ -1,6 +1,7 @@
 package ambigoush.bagasee.model;
 
 
+import ambigoush.bagasee.model.audit.DateAudit;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -20,7 +21,7 @@ import java.util.Set;
         })
 })
 
-public class BuyerBaggage {
+public class BuyerBaggage extends DateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long buyer_baggage_id;
