@@ -21,7 +21,7 @@ public class CustomUserDetailsService implements UserDetailsService {
         SellerBaggage sellerBaggage = sellerRepository.findByUsernameOrEmail(s,s)
         .orElseThrow(()->
                 new UsernameNotFoundException("User not found with username or email : " + s));
-        return UserPrincipal.create(user);
+        return SellerPrincipal.create(user);
     }
 
     @Transactional
@@ -29,6 +29,6 @@ public class CustomUserDetailsService implements UserDetailsService {
         SellerBaggage sellerBaggage = sellerRepository.findById(id).orElseThrow(
                 ()-> new UsernameNotFoundException("User not found with id : " + id)
         );
-        return UserPrincipal.create(sellerBaggage);
+        return SellerPrincipal.create(sellerBaggage);
     }
 }

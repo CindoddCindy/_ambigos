@@ -17,12 +17,12 @@ public class JwtTokenProfider {
     private int jwtExpirationInMs;
 
     public String generateToken(Authentication authentication) {
-        UserPrincipal userPrincipal = (UserPrincipal) authentication.getPrincipal();
+        SellerPrincipal sellerPrincipal = (SellerPrincipal) authentication.getPrincipal();
         Date now = new Date();
         Date expireDate = new Date(now.getTime() + jwtExpirationInMs);
 
         return Jwts.builder()
-                .setSubject(Long.toString(userPrincipal.getId()))
+                .setSubject(Long.toString(sellerPrincipal.getId()))
                 .setIssuedAt()
                 .setExpiration(expireDate)
                 .signWith(SignatureAlgorithm.HS512,jwtSecret)
