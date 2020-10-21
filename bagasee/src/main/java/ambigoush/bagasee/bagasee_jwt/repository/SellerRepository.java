@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<SellerBaggage, Long> {
+public interface SellerRepository extends JpaRepository<SellerBaggage, Long> {
     Optional<SellerBaggage> findByEmail(String email);
 
     Optional<SellerBaggage> findByUsernameOrEmail(String username, String email);
