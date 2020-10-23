@@ -57,6 +57,14 @@ public class SellerBaggage extends DateAudit {
 
         }
 
+
+        public SellerBaggage(@NotBlank @Size(max = 40) String seller_baggage_name, @NotBlank @Size(max = 40) @Email String seller_baggage_email, @NotBlank @Size(max = 15) Long seller_baggage_phone_number, @NotBlank @Size(max = 100) String seller_baggage_password) {
+                this.seller_baggage_name = seller_baggage_name;
+                this.seller_baggage_email = seller_baggage_email;
+                this.seller_baggage_phone_number = seller_baggage_phone_number;
+                this.seller_baggage_password = seller_baggage_password;
+        }
+
         public SellerBaggage(Long seller_baggage_id, @NotBlank @Size(max = 40) String seller_baggage_name, @NotBlank @Size(max = 40) String seller_baggage_email, @NotBlank @Size(max = 15) Long seller_baggage_phone_number, @NotBlank @Size(max = 100) String seller_baggage_password, Set<Role> roleSet) {
                 this.seller_baggage_id = seller_baggage_id;
                 this.seller_baggage_name = seller_baggage_name;

@@ -1,6 +1,9 @@
 package ambigoush.bagasee.bagasee_jwt.controller;
 
+import ambigoush.bagasee.bagasee_jwt.exception.AppException;
+import ambigoush.bagasee.bagasee_jwt.model.RoleUser;
 import ambigoush.bagasee.bagasee_jwt.model.SellerBaggage;
+import ambigoush.bagasee.bagasee_jwt.model.SellerBaggageRole;
 import ambigoush.bagasee.bagasee_jwt.paylod.ApiResponse;
 import ambigoush.bagasee.bagasee_jwt.paylod.JwtAuthenticationResponse;
 import ambigoush.bagasee.bagasee_jwt.paylod.LoginRequest;
@@ -101,18 +104,18 @@ public class AuthController {
         SellerBaggage sellerBaggage = new SellerBaggage(signUpRequestSeller.getSeller_baggage_name(), signUpRequestSeller.getSeller_baggage_email(),
                 signUpRequestSeller.getSeller_baggage_phone_number(), signUpRequestSeller.getSeller_baggage_password());
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        sellerBaggage.setSeller_baggage_password(passwordEncoder.encode(sellerBaggage.getSeller_baggage_password()));
 
-        Role userRole = roleRepository.findByName(RoleName.ROLE_USER)
+        SellerBaggageRole sellerBaggageRole = sellerRepository.findUsername(RoleUser.ROLE_SELLER)
                 .orElseThrow(() -> new AppException("User Role not set."));
 
-        user.setRoles(Collections.singleton(userRole));
+        sellerBaggage.setRoleSet(Collections.singleton(sellerBaggage));
 
-        User result = userRepository.save(user);
+        SellerBaggage sellerBaggage1 = sellerRepository.save(sellerBaggage);
 
         URI location = ServletUriComponentsBuilder
                 .fromCurrentContextPath().path("/api/users/{username}")
-                .buildAndExpand(result.getUsername()).toUri();
+                .buildAndExpand(sellerBaggage1.getSeller_baggage_name()).toUri();
 
         return ResponseEntity.created(location).body(new ApiResponse(true, "User registered successfully"));
     }
