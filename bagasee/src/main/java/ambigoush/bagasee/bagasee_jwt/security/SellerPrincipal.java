@@ -1,10 +1,14 @@
 package ambigoush.bagasee.bagasee_jwt.security;
 
+import ambigoush.bagasee.bagasee_jwt.model.SellerBaggage;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class SellerPrincipal implements UserDetails {
 
@@ -30,6 +34,21 @@ public class SellerPrincipal implements UserDetails {
         this.seller_baggage_phone_number = seller_baggage_phone_number;
         this.seller_baggage_password = seller_baggage_password;
         this.authorities = authorities;
+    }
+
+    public static SellerPrincipal create(SellerBaggage sellerBaggage) {
+        List<GrantedAuthority> authorities = sellerBaggage.getRoleSet().stream().map(role ->
+                new SimpleGrantedAuthority(role.getRoleName().toString())//ini di ganti
+        ).collect(Collectors.toList());
+
+        return new SellerPrincipal(
+                sellerBaggage.getSeller_baggage_id(),
+                sellerBaggage.getSeller_baggage_name(),
+                sellerBaggage.getSeller_baggage_email(),
+                sellerBaggage.getSeller_baggage_phone_number(),
+                sellerBaggage.getSeller_baggage_password(),
+                authorities
+        );
     }
 
     public Long getSeller_baggage_id() {
