@@ -30,7 +30,7 @@ public class SendBaggage {
 
     public String AcceptBuyer;
 
-    public SendBaggage(String sellerBaggageName, String buyerBaggageName, String baggageType, String baggageDestination, String baggageAcceptBy, String transportationName, String transportationType, Date leaveDate, Date arrivalDate, String leaveTime, String timeArrival, String acceptConfirmation, String acceptBuyer) {git
+    public SendBaggage(String sellerBaggageName, String buyerBaggageName, String baggageType, String baggageDestination, String baggageAcceptBy, String transportationName, String transportationType, Date leaveDate, Date arrivalDate, String leaveTime, String timeArrival, String acceptConfirmation, String acceptBuyer) {
         SellerBaggageName = sellerBaggageName;
         BuyerBaggageName = buyerBaggageName;
         BaggageType = baggageType;
