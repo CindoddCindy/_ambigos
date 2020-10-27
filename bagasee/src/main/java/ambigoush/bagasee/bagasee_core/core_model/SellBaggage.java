@@ -1,183 +1,163 @@
 package ambigoush.bagasee.bagasee_core.core_model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class SellBaggage {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  Long SellerBaggageId;
+    private  Long sellerBaggageIdSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public  String SellerBagageName;
+    public  String sellerBagageNameSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public Date DateLeave;
+    public Date dateLeaveSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String TimeLeave;
+    public String timeLeaveSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public Date DateArival;
+    public Date dateArivalSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String TimeArival;
+    public String timeArivalSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String LeaveFrom;
+    public String leaveFromSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String LEaveTo;
+    public String leaveToSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String TransType;
+    public String transTypeSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String TransName;
+    public String transNameSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public int BagageCount;
+    public int bagageCountSell;
 
-    @NotBlank
-    @Size(max = 15)
-    public String TypeBaggage;
+    public  String baggageheavySell;
 
-    @NotBlank
-    @Size(max = 15)
-    public int price;
+    public String typeBaggageSell;
 
-    public SellBaggage(Long sellerBaggageId, @NotBlank @Size(max = 15) String sellerBagageName, @NotBlank @Size(max = 15) Date dateLeave, @NotBlank @Size(max = 15) String timeLeave, @NotBlank @Size(max = 15) Date dateArival, @NotBlank @Size(max = 15) String timeArival, @NotBlank @Size(max = 15) String leaveFrom, @NotBlank @Size(max = 15) String LEaveTo, @NotBlank @Size(max = 15) String transType, @NotBlank @Size(max = 15) String transName, @NotBlank @Size(max = 15) int bagageCount, @NotBlank @Size(max = 15) String typeBaggage, @NotBlank @Size(max = 15) int price) {
-        SellerBaggageId = sellerBaggageId;
-        SellerBagageName = sellerBagageName;
-        DateLeave = dateLeave;
-        TimeLeave = timeLeave;
-        DateArival = dateArival;
-        TimeArival = timeArival;
-        LeaveFrom = leaveFrom;
-        this.LEaveTo = LEaveTo;
-        TransType = transType;
-        TransName = transName;
-        BagageCount = bagageCount;
-        TypeBaggage = typeBaggage;
-        this.price = price;
+    public String priceBaggageSell;
+
+    public SellBaggage(Long sellerBaggageIdSell, String sellerBagageNameSell, Date dateLeaveSell, String timeLeaveSell, Date dateArivalSell, String timeArivalSell, String leaveFromSell, String leaveToSell, String transTypeSell, String transNameSell, int bagageCountSell, String baggageheavySell, String typeBaggageSell, String priceBaggageSell) {
+        this.sellerBaggageIdSell = sellerBaggageIdSell;
+        this.sellerBagageNameSell = sellerBagageNameSell;
+        this.dateLeaveSell = dateLeaveSell;
+        this.timeLeaveSell = timeLeaveSell;
+        this.dateArivalSell = dateArivalSell;
+        this.timeArivalSell = timeArivalSell;
+        this.leaveFromSell = leaveFromSell;
+        this.leaveToSell = leaveToSell;
+        this.transTypeSell = transTypeSell;
+        this.transNameSell = transNameSell;
+        this.bagageCountSell = bagageCountSell;
+        this.baggageheavySell = baggageheavySell;
+        this.typeBaggageSell = typeBaggageSell;
+        this.priceBaggageSell = priceBaggageSell;
     }
 
-    public Long getSellerBaggageId() {
-        return SellerBaggageId;
+    public Long getSellerBaggageIdSell() {
+        return sellerBaggageIdSell;
     }
 
-    public void setSellerBaggageId(Long sellerBaggageId) {
-        SellerBaggageId = sellerBaggageId;
+    public void setSellerBaggageIdSell(Long sellerBaggageIdSell) {
+        this.sellerBaggageIdSell = sellerBaggageIdSell;
     }
 
-    public String getSellerBagageName() {
-        return SellerBagageName;
+    public String getSellerBagageNameSell() {
+        return sellerBagageNameSell;
     }
 
-    public void setSellerBagageName(String sellerBagageName) {
-        SellerBagageName = sellerBagageName;
+    public void setSellerBagageNameSell(String sellerBagageNameSell) {
+        this.sellerBagageNameSell = sellerBagageNameSell;
     }
 
-    public Date getDateLeave() {
-        return DateLeave;
+    public Date getDateLeaveSell() {
+        return dateLeaveSell;
     }
 
-    public void setDateLeave(Date dateLeave) {
-        DateLeave = dateLeave;
+    public void setDateLeaveSell(Date dateLeaveSell) {
+        this.dateLeaveSell = dateLeaveSell;
     }
 
-    public String getTimeLeave() {
-        return TimeLeave;
+    public String getTimeLeaveSell() {
+        return timeLeaveSell;
     }
 
-    public void setTimeLeave(String timeLeave) {
-        TimeLeave = timeLeave;
+    public void setTimeLeaveSell(String timeLeaveSell) {
+        this.timeLeaveSell = timeLeaveSell;
     }
 
-    public Date getDateArival() {
-        return DateArival;
+    public Date getDateArivalSell() {
+        return dateArivalSell;
     }
 
-    public void setDateArival(Date dateArival) {
-        DateArival = dateArival;
+    public void setDateArivalSell(Date dateArivalSell) {
+        this.dateArivalSell = dateArivalSell;
     }
 
-    public String getTimeArival() {
-        return TimeArival;
+    public String getTimeArivalSell() {
+        return timeArivalSell;
     }
 
-    public void setTimeArival(String timeArival) {
-        TimeArival = timeArival;
+    public void setTimeArivalSell(String timeArivalSell) {
+        this.timeArivalSell = timeArivalSell;
     }
 
-    public String getLeaveFrom() {
-        return LeaveFrom;
+    public String getLeaveFromSell() {
+        return leaveFromSell;
     }
 
-    public void setLeaveFrom(String leaveFrom) {
-        LeaveFrom = leaveFrom;
+    public void setLeaveFromSell(String leaveFromSell) {
+        this.leaveFromSell = leaveFromSell;
     }
 
-    public String getLEaveTo() {
-        return LEaveTo;
+    public String getLeaveToSell() {
+        return leaveToSell;
     }
 
-    public void setLEaveTo(String LEaveTo) {
-        this.LEaveTo = LEaveTo;
+    public void setLeaveToSell(String leaveToSell) {
+        this.leaveToSell = leaveToSell;
     }
 
-    public String getTransType() {
-        return TransType;
+    public String getTransTypeSell() {
+        return transTypeSell;
     }
 
-    public void setTransType(String transType) {
-        TransType = transType;
+    public void setTransTypeSell(String transTypeSell) {
+        this.transTypeSell = transTypeSell;
     }
 
-    public String getTransName() {
-        return TransName;
+    public String getTransNameSell() {
+        return transNameSell;
     }
 
-    public void setTransName(String transName) {
-        TransName = transName;
+    public void setTransNameSell(String transNameSell) {
+        this.transNameSell = transNameSell;
     }
 
-    public int getBagageCount() {
-        return BagageCount;
+    public int getBagageCountSell() {
+        return bagageCountSell;
     }
 
-    public void setBagageCount(int bagageCount) {
-        BagageCount = bagageCount;
+    public void setBagageCountSell(int bagageCountSell) {
+        this.bagageCountSell = bagageCountSell;
     }
 
-    public String getTypeBaggage() {
-        return TypeBaggage;
+    public String getBaggageheavySell() {
+        return baggageheavySell;
     }
 
-    public void setTypeBaggage(String typeBaggage) {
-        TypeBaggage = typeBaggage;
+    public void setBaggageheavySell(String baggageheavySell) {
+        this.baggageheavySell = baggageheavySell;
     }
 
-    public int getPrice() {
-        return price;
+    public String getTypeBaggageSell() {
+        return typeBaggageSell;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setTypeBaggageSell(String typeBaggageSell) {
+        this.typeBaggageSell = typeBaggageSell;
+    }
+
+    public String getPriceBaggageSell() {
+        return priceBaggageSell;
+    }
+
+    public void setPriceBaggageSell(String priceBaggageSell) {
+        this.priceBaggageSell = priceBaggageSell;
     }
 }

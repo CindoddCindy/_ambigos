@@ -4,149 +4,149 @@ import java.util.Date;
 
 public class SendBaggage {
 
-    public String SellerBaggageName;
+    public String sellerBaggageNameSend;
 
-    public String BuyerBaggageName;
+    public String buyerBaggageNameSend;
 
-    public String BaggageType;
+    public String baggageTypeSend;
 
-    public String BaggageDestination;
+    public String baggageDestinationSend;
 
-    public String BaggageAcceptBy;
+    public String baggageAcceptBySend;
 
-    public String TransportationName;
+    public String transportationNameSend;
 
-    public String TransportationType;
+    public String transportationTypeSend;
 
-    public Date LeaveDate;
+    public Date leaveDateSend;
 
-    public Date ArrivalDate;
+    public Date arrivalDateSend;
 
-    public  String LeaveTime;
+    public  String leaveTimeSend;
 
-    public  String TimeArrival;
+    public  String timeArrivalSend;
 
-    public String AcceptConfirmation;
+    public String acceptConfirmationSend;
 
-    public String AcceptBuyer;
+    public String acceptBuyerSend;
 
-    public SendBaggage(String sellerBaggageName, String buyerBaggageName, String baggageType, String baggageDestination, String baggageAcceptBy, String transportationName, String transportationType, Date leaveDate, Date arrivalDate, String leaveTime, String timeArrival, String acceptConfirmation, String acceptBuyer) {
-        SellerBaggageName = sellerBaggageName;
-        BuyerBaggageName = buyerBaggageName;
-        BaggageType = baggageType;
-        BaggageDestination = baggageDestination;
-        BaggageAcceptBy = baggageAcceptBy;
-        TransportationName = transportationName;
-        TransportationType = transportationType;
-        LeaveDate = leaveDate;
-        ArrivalDate = arrivalDate;
-        LeaveTime = leaveTime;
-        TimeArrival = timeArrival;
-        AcceptConfirmation = acceptConfirmation;
-        AcceptBuyer = acceptBuyer;
+    public SendBaggage(String sellerBaggageNameSend, String buyerBaggageNameSend, String baggageTypeSend, String baggageDestinationSend, String baggageAcceptBySend, String transportationNameSend, String transportationTypeSend, Date leaveDateSend, Date arrivalDateSend, String leaveTimeSend, String timeArrivalSend, String acceptConfirmationSend, String acceptBuyerSend) {
+        this.sellerBaggageNameSend = sellerBaggageNameSend;
+        this.buyerBaggageNameSend = buyerBaggageNameSend;
+        this.baggageTypeSend = baggageTypeSend;
+        this.baggageDestinationSend = baggageDestinationSend;
+        this.baggageAcceptBySend = baggageAcceptBySend;
+        this.transportationNameSend = transportationNameSend;
+        this.transportationTypeSend = transportationTypeSend;
+        this.leaveDateSend = leaveDateSend;
+        this.arrivalDateSend = arrivalDateSend;
+        this.leaveTimeSend = leaveTimeSend;
+        this.timeArrivalSend = timeArrivalSend;
+        this.acceptConfirmationSend = acceptConfirmationSend;
+        this.acceptBuyerSend = acceptBuyerSend;
     }
 
-    public String getSellerBaggageName() {
-        return SellerBaggageName;
+    public String getSellerBaggageNameSend() {
+        return sellerBaggageNameSend;
     }
 
-    public void setSellerBaggageName(String sellerBaggageName) {
-        SellerBaggageName = sellerBaggageName;
+    public void setSellerBaggageNameSend(String sellerBaggageNameSend) {
+        this.sellerBaggageNameSend = sellerBaggageNameSend;
     }
 
-    public String getBuyerBaggageName() {
-        return BuyerBaggageName;
+    public String getBuyerBaggageNameSend() {
+        return buyerBaggageNameSend;
     }
 
-    public void setBuyerBaggageName(String buyerBaggageName) {
-        BuyerBaggageName = buyerBaggageName;
+    public void setBuyerBaggageNameSend(String buyerBaggageNameSend) {
+        this.buyerBaggageNameSend = buyerBaggageNameSend;
     }
 
-    public String getBaggageType() {
-        return BaggageType;
+    public String getBaggageTypeSend() {
+        return baggageTypeSend;
     }
 
-    public void setBaggageType(String baggageType) {
-        BaggageType = baggageType;
+    public void setBaggageTypeSend(String baggageTypeSend) {
+        this.baggageTypeSend = baggageTypeSend;
     }
 
-    public String getBaggageDestination() {
-        return BaggageDestination;
+    public String getBaggageDestinationSend() {
+        return baggageDestinationSend;
     }
 
-    public void setBaggageDestination(String baggageDestination) {
-        BaggageDestination = baggageDestination;
+    public void setBaggageDestinationSend(String baggageDestinationSend) {
+        this.baggageDestinationSend = baggageDestinationSend;
     }
 
-    public String getBaggageAcceptBy() {
-        return BaggageAcceptBy;
+    public String getBaggageAcceptBySend() {
+        return baggageAcceptBySend;
     }
 
-    public void setBaggageAcceptBy(String baggageAcceptBy) {
-        BaggageAcceptBy = baggageAcceptBy;
+    public void setBaggageAcceptBySend(String baggageAcceptBySend) {
+        this.baggageAcceptBySend = baggageAcceptBySend;
     }
 
-    public String getTransportationName() {
-        return TransportationName;
+    public String getTransportationNameSend() {
+        return transportationNameSend;
     }
 
-    public void setTransportationName(String transportationName) {
-        TransportationName = transportationName;
+    public void setTransportationNameSend(String transportationNameSend) {
+        this.transportationNameSend = transportationNameSend;
     }
 
-    public String getTransportationType() {
-        return TransportationType;
+    public String getTransportationTypeSend() {
+        return transportationTypeSend;
     }
 
-    public void setTransportationType(String transportationType) {
-        TransportationType = transportationType;
+    public void setTransportationTypeSend(String transportationTypeSend) {
+        this.transportationTypeSend = transportationTypeSend;
     }
 
-    public Date getLeaveDate() {
-        return LeaveDate;
+    public Date getLeaveDateSend() {
+        return leaveDateSend;
     }
 
-    public void setLeaveDate(Date leaveDate) {
-        LeaveDate = leaveDate;
+    public void setLeaveDateSend(Date leaveDateSend) {
+        this.leaveDateSend = leaveDateSend;
     }
 
-    public Date getArrivalDate() {
-        return ArrivalDate;
+    public Date getArrivalDateSend() {
+        return arrivalDateSend;
     }
 
-    public void setArrivalDate(Date arrivalDate) {
-        ArrivalDate = arrivalDate;
+    public void setArrivalDateSend(Date arrivalDateSend) {
+        this.arrivalDateSend = arrivalDateSend;
     }
 
-    public String getLeaveTime() {
-        return LeaveTime;
+    public String getLeaveTimeSend() {
+        return leaveTimeSend;
     }
 
-    public void setLeaveTime(String leaveTime) {
-        LeaveTime = leaveTime;
+    public void setLeaveTimeSend(String leaveTimeSend) {
+        this.leaveTimeSend = leaveTimeSend;
     }
 
-    public String getTimeArrival() {
-        return TimeArrival;
+    public String getTimeArrivalSend() {
+        return timeArrivalSend;
     }
 
-    public void setTimeArrival(String timeArrival) {
-        TimeArrival = timeArrival;
+    public void setTimeArrivalSend(String timeArrivalSend) {
+        this.timeArrivalSend = timeArrivalSend;
     }
 
-    public String getAcceptConfirmation() {
-        return AcceptConfirmation;
+    public String getAcceptConfirmationSend() {
+        return acceptConfirmationSend;
     }
 
-    public void setAcceptConfirmation(String acceptConfirmation) {
-        AcceptConfirmation = acceptConfirmation;
+    public void setAcceptConfirmationSend(String acceptConfirmationSend) {
+        this.acceptConfirmationSend = acceptConfirmationSend;
     }
 
-    public String getAcceptBuyer() {
-        return AcceptBuyer;
+    public String getAcceptBuyerSend() {
+        return acceptBuyerSend;
     }
 
-    public void setAcceptBuyer(String acceptBuyer) {
-        AcceptBuyer = acceptBuyer;
+    public void setAcceptBuyerSend(String acceptBuyerSend) {
+        this.acceptBuyerSend = acceptBuyerSend;
     }
 }
